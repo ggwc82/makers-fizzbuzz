@@ -13,16 +13,20 @@ describe 'fizzbuzz' do
  		expect(fizzbuzz(5)).to eq 'buzz'
  	end
 
- 	(1..20).each do |i|
+ 	(1..50).each do |i|
  		if i % 3 == 0 && i % 5 != 0 
- 			it 'returns "fizz" when passed any multiple of 3' do
+ 			it 'returns "fizz" when passed any multiple of 3 except when also a multiple of 5' do
  				expect(fizzbuzz(i)).to eq 'fizz'
  			end	
  		end
  	end
 
-it 'returns "fizzbuzz" when passed 15' do	
-	expect(fizzbuzz(15)).to eq 'fizzbuzz'
+it 'returns "fizzbuzz" when passed a multiple of both 3 and 5' do	
+	(1..50).each do |i|
+		if i % 3 == 0 && i % 5 == 0
+			expect(fizzbuzz(i)).to eq 'fizzbuzz'
+		end
+	end
 end
 
 end
