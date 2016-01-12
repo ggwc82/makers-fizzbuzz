@@ -37,4 +37,12 @@ end
 	end
 end
 
+(1..50).each do |i|
+	it 'returns the number itself if not divisible by 3 or 5' do
+		if i % 5 != 0 && i % 3 != 0
+			expect(fizzbuzz(i)).to eq i
+		end
+	end
+end
+
 end
