@@ -14,11 +14,15 @@ describe 'fizzbuzz' do
  	end
 
  	(1..20).each do |i|
- 		if i % 3 == 0
+ 		if i % 3 == 0 && i % 5 != 0 
  			it 'returns "fizz" when passed any multiple of 3' do
  				expect(fizzbuzz(i)).to eq 'fizz'
  			end	
  		end
  	end
+
+it 'returns "fizzbuzz" when passed 15' do	
+	expect(fizzbuzz(15)).to eq 'fizzbuzz'
+end
 
 end
