@@ -31,11 +31,9 @@ end
 	end
 end
 
-(1..100).each do |i|
+[1, 2, 7, 13, 17, 19, 53, 71, 92, 98].each do |i|
 	it 'returns the number itself if not divisible by 3 or 5' do
-		if i % 5 != 0 && i % 3 != 0
-			expect(fizzbuzz(i)).to eq i
-		end
+		expect(fizzbuzz(i)).to eq i
 	end
 end
 
