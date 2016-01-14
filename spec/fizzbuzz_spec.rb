@@ -20,10 +20,8 @@ describe 'fizzbuzz' do
  	end
 
 it 'returns "fizzbuzz" when passed a multiple of both 3 and 5' do	
-	(1..100).each do |i| #loop on the inside will only return one test example (1 success or 1 failure)
-		if i % 3 == 0 && i % 5 == 0
+	[15, 30, 45, 60, 75, 90].each do |i| #iterator on the inside will only return one test example (1 success or 1 failure)
 			expect(fizzbuzz(i)).to eq 'fizzbuzz'
-		end
 	end
 end
 
